@@ -3,8 +3,10 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"math/rand"
 	"os"
 	"strconv"
+	"time"
 )
 
 func main() {
@@ -38,6 +40,11 @@ func main() {
 			fmt.Println(tab[result1-1])
 		}
 	}
+
+	min := 0
+	max := 1000
+	rand.Seed(time.Now().Unix())
+	fmt.Println("The random number is", rand.Intn(max-min)+min)
 
 	data.Close()
 }
